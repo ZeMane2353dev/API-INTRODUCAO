@@ -29,3 +29,5 @@ app.get("/usuarios", async (req, res) => {
     res.status(error.status || 500).json({ message: error.message || "Erro!" });
   }
 });
+
+//teste
