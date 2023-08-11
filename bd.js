@@ -32,4 +32,12 @@ async function insertUsuario(data) {
 }
 
 //bd.js
-export { selectUsuarios, selectUsuario, insertUsuario };
+async function deleteUsuario(id) {
+  const client = await connect();
+  const query = "DELETE FROM usuario WHERE id = $1";
+  await client.query(query, [id]);
+}
+
+//bd.js
+//bd.js
+export { selectUsuarios, selectUsuario, insertUsuario, deleteUsuario };
